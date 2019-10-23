@@ -1,6 +1,6 @@
-## Amazon RDS On Vmware User Guide
+## Amazon RDS On VMware User Guide
 
-The open source version of the Amazon RDS docs. You can submit feedback & requests for changes by submitting issues in this repo or by making proposed changes & submitting a pull request.
+The open source version of the Amazon RDS on VMware docs. You can submit feedback & requests for changes by submitting issues in this repo or by making proposed changes & submitting a pull request.
 
 ## License Summary
 
