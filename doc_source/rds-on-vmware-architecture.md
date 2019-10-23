@@ -12,7 +12,7 @@ The Amazon RDS on VMware architecture uses the RDS connector, a software applian
 
 The following diagram shows the onboarding process for Amazon RDS on VMware\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/rds-on-vmware-architecture-onboarding.png)
 
 To onboard Amazon RDS on VMware, you create a custom Availability Zone from the AWS Management Console in the AWS Region\. You then download the Amazon RDS on VMware Installer from the AWS Management Console to the on\-premises vSphere cluster where you want to use the service\. When you run the Installer, it deploys the local components for Amazon RDS on VMware on your vSphere cluster and connects your cluster to the Amazon RDS service running in the AWS Region\. You can then create a new database using the AWS Management Console, AWS CLI, or RDS API by choosing the appropriate database engine and DB instance class size\.
 
