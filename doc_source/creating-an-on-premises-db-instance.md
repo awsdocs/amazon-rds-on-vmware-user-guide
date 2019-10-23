@@ -28,17 +28,17 @@ You can create an on\-premises DB instance using the AWS Management Console, the
 1. Choose **Create database**\. 
 
    The **Create database** page opens\.  
-![\[Create database page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Create database page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/create-on-premises-db-instance.png)
 
 1. In the **Database location** section, choose **On\-premises**\.
 
 1. In the **Availability zone** section, choose **Custom Availability Zone**\.
 
 1. In the **Engine options** section, choose the type of DB engine in **Engine type**, and then, for some DB engines, choose the DB engine version in **Version**\.  
-![\[DB engine options\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[DB engine options\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/create-on-premises-db-instance-engine.png)
 
    If you chose a DB engine that requires an on\-premises customer provided license \(such as Microsoft SQL Server\), you might need to choose the DB engine edition for **Edition**\.  
-![\[DB engine edition and version\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[DB engine edition and version\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/create-on-premises-db-edition-version.png)
 **Important**  
 For DB engines that require an on\-premises customer\-provided license, operating system and database media must be installed in the custom AZ\. Also, the edition and version of the media must match your selections\. If the media is not installed, a warning message appears\. For information about installing media, see [Installing the Media for Microsoft SQL Server](installing-media.md)\.
 

@@ -13,7 +13,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
 1. Download the Amazon RDS on VMware Installer \(Installer\) on your vSphere cluster\.
 
    1. Choose **Download Installer**, accept the terms of the agreement, and save the file on your file system\.  
-![\[Download Amazon RDS on VMware Installer\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Download Amazon RDS on VMware Installer\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-download.png)
 
    1. Unzip the archive\.
 
@@ -26,7 +26,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
    1. Choose **Create custom AZ**\.
 
       The **Create custom AZ** page appears\.  
-![\[Create custom AZ\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Create custom AZ\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/create-custom-az.png)
 
    1. In **Custom AZ name**, ente4r a name for the custom AZ\.
 
@@ -41,7 +41,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
 1. In your VMware environment, deploy the Installer OVA to start an Installer virtual machine \(VM\)\.
 
    As part of the installation, you choose the networks for Cluster Control Network, Internet Network, Application Network, and Management Network\. The Internet Network and Application Network must have DHCP enabled\.  
-![\[Deploy the Installer OVA\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Deploy the Installer OVA\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-deploy-ovf.png)
 
 1. Power on the installer VM\. The installer VM gets two IP addresses dynamically assigned on both the Internet Network and Application Network\. You must be able to reach at least one of these IP addresses to continue with the installation\. Note the IP address that you can reach as `installer-ip`\.
 
@@ -60,7 +60,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
    Or you can follow the steps in [Import the Installer VM Certificate](getting-started-with-rds-on-vmware.onboard.import-vm-certificate.md) to add the certificate to your browser before launching the installer\.
 
    The opening page of the Installer appears\.  
-![\[Opening page of the Amazon RDS on VMware Installer\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Opening page of the Amazon RDS on VMware Installer\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-opening.png)
 
 1. On the opening page, enter the following information:
    + **AWS Access Key ID** – The access key for your AWS Identity and Access Management \(IAM\) user
@@ -71,15 +71,15 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
    If validation fails, create your **AWS Access Key ID** and **AWS Secret Access Key** by following the instructions in [Managing Access Keys for Your AWS Account](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html) in the *AWS General Reference*\.
 
 1. Choose **AWS Configuration** and, for **Select Region**, choose the AWS Region that contains your custom AZ\.  
-![\[Choose AWS Region\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Choose AWS Region\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-aws-region.png)
 
    If you can't connect to the AWS Region, make sure that you completed all prerequisites described in [Complete the Prerequisites](getting-started-with-rds-on-vmware.pre-onboarding.md)\.
 
 1. On the **AWS Configuration** page, choose **RETRIEVE AZS** to populate the list of custom AZs in the selected AWS Region\. Next, choose your custom AZ from **Select Custom AZs**\.  
-![\[Select custom AZ\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Select custom AZ\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-select-custom-az.png)
 
 1. Choose **NEXT** to open the **Network Configurations** page\.  
-![\[Network Configuration page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Network Configuration page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-network-configuration.png)
 
    Enter the following information:
    + **ESXi Management Static IP Address** – The IP address of your ESXi Management Network
@@ -89,7 +89,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
    + **NTP Server** – The DNS name or IPv4 address of the Network Time Protocol \(NTP\) server to which your ESXi hosts sync
 
 1. Choose **NEXT** to open the **vCenter Configuration** page\.  
-![\[vCenter Configuration page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[vCenter Configuration page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-vcenter-configuration.png)
 
    Enter the following information:
    + **FQDN** – The vCenter fully qualified domain name
@@ -101,7 +101,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
    If you can't connect, make sure that you completed all of the prerequisites described in [Complete the Prerequisites](getting-started-with-rds-on-vmware.pre-onboarding.md)\. You can also choose **DOWNLOAD SUPPORT BUNDLE** to download log files that can help you diagnose connection problems\.
 
 1. Choose **NEXT** to open the **Placement** page\.  
-![\[Placement Details page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Placement Details page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-placement-details.png)
 
    Choose the following items:
    + **Select Datacenter** – The virtual data center
@@ -114,7 +114,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
    If there is a problem with one or more items, correct the problem before proceeding\. Choose **BACK**, and then choose **VALIDATE** again to check the validation status\.
 
 1. When all of the items are ready for installation, choose **NEXT** to open the **Summary** page\.  
-![\[Summary page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Summary page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-summary.png)
 
    Verify the onboarding information\.
 
@@ -125,7 +125,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
 1. On the **Installation Status** page, read the message and choose **CLOSE**\.
 **Important**  
 The installation isn't complete until the status of the custom AZ is **Active**\. Move on to the next steps to check the status of the custom AZ\.  
-![\[Installation Status page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Installation Status page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-installation-status.png)
 
 1. In the Amazon RDS console, check the status of your custom AZs\.
 
@@ -134,7 +134,7 @@ The installation isn't complete until the status of the custom AZ is **Active**\
    1. In the navigation pane, choose **Custom AZs**\.
 
    1. View the **Status** column\.  
-![\[Custom AZ Status\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Custom AZ Status\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/custom-az-status.png)
 
       If a custom AZ isn't registered yet with your vSphere cluster, the status is **Unregistered**\. Register these custom AZs\.
 

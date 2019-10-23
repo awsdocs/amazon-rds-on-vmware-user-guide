@@ -24,7 +24,7 @@ The process requires the Managed Object Browser \(MOB\) to find the certificate 
    1. Choose **FindAllByIp**\.
 
       The **Method Invocation Result** page looks similar to the following\.  
-![\[Method Invocation Result page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Method Invocation Result page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/vm-cert-method-invocation-result.png)
 
       Note the return value, which is the VM object reference\. On the preceding page, the VM Object reference value is `vm-41`\.
 
@@ -35,7 +35,7 @@ The process requires the Managed Object Browser \(MOB\) to find the certificate 
       Replace *VM\_object\_reference* with the value that you retrieved in the previous step\. In the sample page, it was `vm-41`\.
 
       A page similar to the following opens\.  
-![\[Data Object Type page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Data Object Type page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/vm-cert-data-object-type.png)
 
    1. Copy and paste this certificate to create a text file called `RDSinstCert.cer`\.
 
@@ -52,12 +52,12 @@ The process requires the Managed Object Browser \(MOB\) to find the certificate 
    The following steps import the certificate with Chrome on Windows\. On Windows, this method also works with Edge and Firefox, but Firefox must be configured to use the Windows certificate store instead of the Mozilla store\. On Mac, you must use the Mac system keychain\.
 
    1. Go to **Manage Certificates** Chrome settings, and import the certificate on the **Trusted Root Certification Authorities** folder, as shown following\.  
-![\[Certificates page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Certificates page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/vm-cert-certificates.png)
 
    1. On the **Security Warning** page, accept the installation of the certificate\.
 
       After the certificate is installed, it is listed in the **Trusted Root Certification Authorities** folder, as shown following\.  
-![\[Certificates page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Certificates page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/vm-cert-certificate-listed.png)
 
 1. Restart the browser and launch the Installer by following the instructions in step 8 in [Onboard Your vSphere Cluster](getting-started-with-rds-on-vmware.onboard.md)\.
 

@@ -18,7 +18,7 @@ During onboarding, you configure the following networks\.
 
 The following illustration shows how your Amazon RDS on VMware configuration looks after onboarding is complete\.
 
-![\[Amazon RDS on VMware configuration after onboarding\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Amazon RDS on VMware configuration after onboarding\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/pre-onboarding-requirements.png)
 
 **Important**  
 Currently, Amazon RDS on VMware is available only in the US East \(N\. Virginia\) AWS Region\.

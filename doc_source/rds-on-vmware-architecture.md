@@ -20,7 +20,7 @@ To onboard Amazon RDS on VMware, you create a custom Availability Zone from the 
 
 The RDS connector uses an outbound VPN connection to connect to an AWS Region\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/rds-on-vmware-architecture-connecting.png)
 
 The connection enables communication between your vSphere cluster and the AWS Region\. Amazon RDS on VMware uses the connection for management activities\. It also uses the connection to send information, such as Amazon CloudWatch data, from the vSphere cluster to the AWS Region\.
 
@@ -28,7 +28,7 @@ The connection enables communication between your vSphere cluster and the AWS Re
 
 To provision and manage DB instances, you create a Cluster Control Network in your vSphere cluster\. You can provision several DB instances and choose from different DB engine types, such a MySQL, PostgreSQL, and Microsoft SQL Server\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/rds-on-vmware-architecture-provisioning.png)
 
 You also create an Application Network in your vSphere cluster\. Your applications, users, and DBAs use this network to interact with Amazon RDS on VMware DB instances\.
 
@@ -36,6 +36,6 @@ You also create an Application Network in your vSphere cluster\. Your applicatio
 
 You can create automated or manual snapshots of your DB instances\. These snapshots are stored on your vSphere cluster\.
 
-![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Image NOT FOUND\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/rds-on-vmware-architecture-backup.png)
 
 You can restore from a snapshot or to a point in time to create new on\-premises DB instances\.

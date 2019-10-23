@@ -13,7 +13,7 @@ During the onboarding process described in [Getting Started with Amazon RDS on V
 1. Choose **Create custom AZ**\.
 
    The **Create custom AZ** page appears\.  
-![\[Create custom AZ\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Create custom AZ\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/create-custom-az.png)
 
 1. In **Custom AZ name**, enter a name for the custom AZ\.
 

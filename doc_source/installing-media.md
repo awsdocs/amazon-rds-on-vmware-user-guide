@@ -36,17 +36,17 @@ You can install the media using the AWS Management Console, the AWS CLI, or the 
 1. In the navigation pane, choose **Custom AZs**\.
 
    The **Custom AZs** page appears\.  
-![\[Custom AZs page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Custom AZs page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/custom-azs.png)
 
 1. Choose the name of the custom AZ on which you want to install media to show the custom AZ details\.
 
    The details page for the custom AZ appears\.  
-![\[Custom AZs page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Custom AZs page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/custom-az-details.png)
 
 1. In the **Install media** section, choose **Import**\.
 
    The **Import media** page appears\.  
-![\[Import media page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Import media page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/install-media.png)
 
 1. In the **Engine options** section, choose the DB engine, the edition, and the version\.
 
@@ -64,7 +64,7 @@ For information about supported media, see [Supported Media](#installing-media.s
 1. Choose **Import media**\.
 
    You can monitor the status of the import on the details page for the custom AZ\.  
-![\[Media installation status\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+![\[Media installation status\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/custom-az-details-install-status.png)
 
 ### AWS CLI<a name="installing-media.cli"></a>
 
