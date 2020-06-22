@@ -5,13 +5,15 @@ The basic building block of Amazon RDS is the DB instance\. The DB instance is w
 Before you can create on\-premises DB instances, you must complete the following prerequisites:
 + Set up your AWS account\. For instructions, see [Setting Up Amazon RDS on VMware](setting-up-rds-on-vmware.md)\.
 + Create at least one custom Availability Zone \(custom AZ\), and register the custom AZ with the vSphere cluster\. For instructions, see [Getting Started with Amazon RDS on VMware](getting-started-with-rds-on-vmware.md)\.
+
+  If the status of the custom AZ in which you want to create a DB instance is **Disconnected**, see [Custom AZ Is Disconnected](troubleshooting-rds-on-vmware.md#troubleshooting-rds-on-vmware.disconnected)\.
 + If you are working with a DB engine that requires an on\-premises customer provided license \(such as Microsoft SQL Server\), install your operating system and database media\. For SQL Server, you must do this before you can create Amazon RDS DB instances\. For instructions, see [Installing the Media for Microsoft SQL Server](installing-media.md)\. Installing media is not required for MySQL or PostgreSQL\.
 + Determine which DB instance class most closely matches your VMware cluster\. For instructions, see [Choosing the On\-Premises DB Instance Class](db-instance-class-on-premises.md)\.
 
 Amazon RDS on VMware supports the following DB engines and versions:
 + Amazon RDS for Microsoft SQL Server 2016 SP2 Enterprise Edition
 + Amazon RDS for MySQL version 5\.7
-+ Amazon RDS for PostgreSQL version 10\.9\-R1
++ Amazon RDS for PostgreSQL version 10\.9\-R1 and 10\.10\-R1
 
 You can create an on\-premises DB instance using the AWS Management Console, the AWS CLI, or the RDS API\.
 

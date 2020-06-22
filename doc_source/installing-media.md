@@ -9,15 +9,39 @@ MySQL and PostgreSQL don't require you to install media\. If you plan to use one
 
 Currently, the following media are supported:
 + **OS Installation Media**
-  + Windows Server 2016
-  + Windows Server 2016 \(Updated January 2017\)
-  + Windows Server 2016 \(Updated February 2018\)
+  + Windows Server 2016 \(x64\) \- DVD \(English\)
+
+    Released: 10/12/2016
+
+    File name: en\_windows\_server\_2016\_x64\_dvd\_9327751\.iso
+  + Windows Server 2016 \(Updated January 2017\) \(x64\) \- DVD \(English\)
+
+    Released: 1/12/2017
+
+    File name: en\_windows\_server\_2016\_x64\_dvd\_9718492\.iso
+  + Windows Server 2016 \(Updated February 2018\) \(x64\) \- DVD \(English\)
+
+    Released: 2/15/2018
+
+    File name: en\_windows\_server\_2016\_updated\_feb\_2018\_x64\_dvd\_11636692\.iso
 
   For more information, see [ https://my\.visualstudio\.com/Downloads?q=windows%20server%202016](https://my.visualstudio.com/Downloads?q=windows%20server%202016)\.
 + **Engine Installation Media**
-  + SQL Server 2016 Enterprise
-  + SQL Server 2016 Enterprise with Service Pack 1
-  + SQL Server 2016 Enterprise with Service Pack 2
+  + SQL Server 2016 Enterprise \(x64\) \- DVD \(English\)
+
+    Released: 6/1/2016
+
+    File name: en\_sql\_server\_2016\_enterprise\_x64\_dvd\_8701793\.iso
+  + SQL Server 2016 Enterprise with Service Pack 1 \(x64\) \- DVD \(English\)
+
+    Released: 11/16/2016
+
+    File name: en\_sql\_server\_2016\_enterprise\_with\_service\_pack\_1\_x64\_dvd\_9542382\.iso
+  + SQL Server 2016 Enterprise with Service Pack 2 \(x64\) \- DVD \(English\)
+
+    Released: 5/22/2018
+
+    File name: en\_sql\_server\_2016\_enterprise\_with\_service\_pack\_2\_x64\_dvd\_12124051\.iso
 
   For more information, see [ https://my\.visualstudio\.com/Downloads?q=sql%20server%202016](https://my.visualstudio.com/Downloads?q=sql%20server%202016)\.
 
@@ -124,6 +148,7 @@ Use the following sections to troubleshoot problems that you have with installin
 **Topics**
 + [Media Not Found](#installing-media.troubleshooting.media-not-found)
 + [Media Not Supported](#installing-media.troubleshooting.media-not-found)
++ [Custom AZ Disconnected](#installing-media.troubleshooting.custom-az-disconnected)
 
 ### Media Not Found<a name="installing-media.troubleshooting.media-not-found"></a>
 
@@ -153,3 +178,9 @@ Engine media validation failed
 ```
 
 To solve the issue, specify supported installation media\. For information about supported media, see [Supported Media](#installing-media.supported)\.
+
+### Custom AZ Disconnected<a name="installing-media.troubleshooting.custom-az-disconnected"></a>
+
+In this case, the custom AZ that you attempted to attach installation media to can't currently be reached\.
+
+To solve the issue, see [Custom AZ Is Disconnected](troubleshooting-rds-on-vmware.md#troubleshooting-rds-on-vmware.disconnected)\.

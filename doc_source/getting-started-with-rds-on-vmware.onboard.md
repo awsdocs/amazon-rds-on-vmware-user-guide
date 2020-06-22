@@ -6,7 +6,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
 
 1. Sign in to the AWS Management Console and open the Amazon RDS console at [https://console\.aws\.amazon\.com/rds/](https://console.aws.amazon.com/rds/)\.
 
-1. In the top\-right corner of the console, choose the US East \(N\. Virginia\) AWS Region\.
+1. In the upper\-right corner of the console, choose the US East \(N\. Virginia\) AWS Region\.
 
 1. In the navigation pane, choose **Custom AZs**\.
 
@@ -19,7 +19,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
 
 1. In the Amazon RDS console, create a custom AZ:
 
-   1. In the top\-right corner of the console, choose the AWS Region from which you downloaded the Installer\.
+   1. In the upper\-right corner of the console, choose the AWS Region from which you downloaded the Installer\.
 
    1. In the navigation pane, choose **Custom AZs**\.
 
@@ -28,7 +28,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
       The **Create custom AZ** page appears\.  
 ![\[Create custom AZ\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/create-custom-az.png)
 
-   1. In **Custom AZ name**, ente4r a name for the custom AZ\.
+   1. In **Custom AZ name**, enter a name for the custom AZ\.
 
    1. In **VPN settings**, enter a name for the VPN for **VPN tunnel name** and enter the VPN Originator IP for **VPN originator IP**\.
 
@@ -63,8 +63,17 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
 ![\[Opening page of the Amazon RDS on VMware Installer\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-opening.png)
 
 1. On the opening page, enter the following information:
-   + **AWS Access Key ID** – The access key for your AWS Identity and Access Management \(IAM\) user
-   + **AWS Secret Access Key** – The secret key for your IAM user
+   + **AWS Access Key ID** – The access key for your AWS Identity and Access Management \(IAM\) user\.
+   + **AWS Secret Access Key** – The secret key for your IAM user\.
+   + **Proxy Setting** – Enable this option if you want all external HTTP and HTTPS traffic \(for example, traffic to AWS services such as Amazon CloudWatch and Amazon S3\) from RDS on VMware to use a proxy server\.
+
+     If you enable this option, the Installer shows the proxy server settings\.  
+![\[Proxy server options in the Amazon RDS on VMware Installer\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-proxy.png)
+
+     Enter the following information:
+     + **Proxy Host** – The URL of the proxy host\.
+     + **Proxy Port** – The port used by the proxy host\.
+     + **Proxy Authentication required** – Enable this option if you aren't using a transparent proxy, and enter the proxy user, password, and public key in PEM format\.
 
 1. Choose **VALIDATE WITH AWS CREDENTIALS**\.
 
@@ -94,6 +103,8 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
    Enter the following information:
    + **FQDN** – The vCenter fully qualified domain name
    + **Administrator Username** – The administrative user name for the specified vCenter FQDN
+
+     Enter the username in the format `user@domain`, for example `admin@vsphere.local`\.
    + **Administrator Password** – The password for the specified administrative user
 
 1. On the **vCenter Configuration** page, choose **TEST CONNECTION**\.
@@ -129,7 +140,7 @@ The installation isn't complete until the status of the custom AZ is **Active**\
 
 1. In the Amazon RDS console, check the status of your custom AZs\.
 
-   1. In the top\-right corner of the console, choose the AWS Region that contains your custom AZs\.
+   1. In the upper\-right corner of the console, choose the AWS Region that contains your custom AZs\.
 
    1. In the navigation pane, choose **Custom AZs**\.
 
@@ -139,6 +150,8 @@ The installation isn't complete until the status of the custom AZ is **Active**\
       If a custom AZ isn't registered yet with your vSphere cluster, the status is **Unregistered**\. Register these custom AZs\.
 
       If a custom AZ is registered with your vSphere cluster, the status is **Active**\.
+
+      If a custom AZ is disconnected from Amazon RDS, the status is **Disconnected**\. For more information about restoring connectivity with such a custom AZ, see [Custom AZ Is Disconnected](troubleshooting-rds-on-vmware.md#troubleshooting-rds-on-vmware.disconnected)\.
 
 1. After a custom AZ is registered, you can create one or more DB instances in the custom AZ\.
 

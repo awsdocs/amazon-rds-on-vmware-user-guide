@@ -40,8 +40,10 @@ Currently, working with a local datastore is not supported\.
       + 180 GB of storage
 
 1. Meet the following vSphere environment requirements:
-   + vCenter 6\.5 or 6\.7
-   + VMware vSphere Enterprise Plus edition
+   + VMware vCenter Server version 6\.5 or 6\.7
+   + VMware vSphere Server Enterprise Edition 6\.5 or 6\.7
+
+   For specific release versions, see the [VMware Product Interoperability Matrices](https://www.vmware.com/resources/compatibility/sim/interop_matrix.php#interop&492=&1=&2=)\.
 
 1. Gather the information required for onboarding\.
 
@@ -81,23 +83,23 @@ Make sure that all of the vCenter Server and ESXi hosts are in the same Manageme
         This requirement doesn’t apply to MySQL or PostgreSQL DB instances\.
       + There must be DHCP services on this interface with the default gateway\.
       + The DHCP broadcast must not cross over an up\-link\.
-      + The network must allow outbound and related inbound response traffic to ports 50, 500, and 4500—IKE/IP security \(IPSec\) for a site\-to\-site VPN tunnel, UDP, or TCP\.
+      + The network must allow outbound and related inbound traffic for ISAKMP \(UDP port 500\), IPSec NAT Traversal \(UDP port 4500\), and Encapsulating Security Payload \(IP protocol 50\)\.
       + The network must allow outbound and related inbound response traffic to TCP port 443 \(HTTPS to access public AWS service endpoints\)\.
 
    1. Meet the requirements for the Cluster Control Network:
       + There must be a new network dedicated to Amazon RDS on VMware with a unique virtual LAN \(VLAN\) ID\.
-      + The new network must run a DHCP server provided by Amazon RDS on VMware after the Edge Router appliance is deployed\. Amazon RDS on VMware assigns IP addresses in the predefined 54\.239\.236\.0/22 range of public IP addresses that are not internet\-routable\.
-      + The network administrator must verify that broadcast packets don't cross over an up\-link\. In other words, broadcast packets must be associated with a unique VLAN ID\.
-      + The distributed port group must be accessible from all ESXi hosts that are part of the vSphere cluster selected\.
+      + Amazon RDS on VMware assigns IP addresses in the predefined 54\.239\.236\.0/22 range using DHCP using the RDS Edge Router virtual appliance\. This address is a public IP address range managed by AWS but set aside for Amazon RDS on VMware use\. Therefore, it is important that the Cluster Control Network is isolated \(using VLAN tagging\)\. 
+      + The network administrator must verify that broadcast packets don't cross over an up\-link\. Broadcast packets must be associated with a unique VLAN ID\.
+      + The distributed port group must be accessible from all ESXi hosts that are part of the selected vSphere cluster\.
       + The distributed port group must use the elastic "port allocation" flag\.
+      + After the distributed port group is created, you must provision a vmkernel adapter with replication and replication NFC traffic enabled\. This vmkernel adapter should use DHCP because it will be given an address by Amazon RDS on VMware\.
 **Note**  
-Make sure that you provision VMKernel adapters for each of the cluster's ESXi hosts into the Cluster Control Network\.  
+Provision VMKernel adapters for each of the cluster's ESXi hosts into the Cluster Control Network\.  
 DHCP services are not required on the Cluster Control Network\.
 
    1. Meet the requirements for the Application Network:
       + Provide an existing network where you plan to deploy the DB instances\. Each DB instance will also have an interface in Cluster Control network, because all Amazon RDS operations happen over the cluster control network\.
-      + The network administrator must provide DHCP services on this interface\.
-      + DHCP services for this interface must not provide the default gateway\.
+      + The Application Network must be connected to a DHCP enabled interface\. This interface must provide a default gateway for the VMs that will connect to this network\.
       + DHCP broadcast must not cross over an up\-link\.
       + The distributed port group must be accessible from all ESXi hosts underlying the Amazon RDS on VMware cluster\.
       + The distributed port group must use the elastic "port allocation" flag\.
@@ -110,7 +112,7 @@ DHCP services are not required on the Management Network\.
 
    1. Meet the requirements for the vCenter server credentials\.
 
-      Amazon RDS on VMware requires a set of vCenter server credentials \(a single sign\-on user name and password\) to use during the onboarding process\. This user creates four new SSO users scoped to the cluster\. The user also creates the resources to be used by the Amazon RDS on VMware management virtual machines and DB instances\. We recommend creating a new user with admin privileges to use during onboarding and removing the user after onboarding is complete\. Use an appropriate single sign\-on \(SSO\) domain\.
+      Amazon RDS on VMware requires a set of vCenter server credentials \(a single sign\-on user name and password\) to use during the onboarding process\. This user creates four new SSO users scoped to the cluster\. The user also creates the resources to be used by the Amazon RDS on VMware management virtual machines and DB instances\. We recommend creating a new user with admin privileges to use during onboarding and removing the user after onboarding is complete\. Use a local single sign\-on \(SSO\) domain\. Active Directory domains aren't currently supported\.
 
       Add the new user to the following groups:
       + ADMINISTRATORS
@@ -119,6 +121,16 @@ DHCP services are not required on the Management Network\.
       + LICENSESERVICE\.ADMINISTRATORS
       + COMPONENTMANAGER\.ADMINISTRATORS
       + SYSTEMCONFIGURATION\.BASHSHELLADMINISTRATORS
+
+1. To use a proxy server for external traffic, complete the following prerequisites\. RDS on VMware connects with AWS services, such as Amazon CloudWatch and Amazon S3, over HTTPS\.
+
+   1. Make sure that the proxy server is authenticated with transparent or password\-based methods\.
+
+   1. Ensure that the proxy server maintains a trust store\.
+
+      The proxy server is a client that initiates Transport Layer Security \(TLS\) connections with AWS services, such as Amazon CloudWatch and Amazon S3\. The proxy server must store CA certificates for these AWS services\. For more information, see [ Step 3: Install a TLS certificate on on\-premises servers and VMs](https://docs.aws.amazon.com/systems-manager/latest/userguide/hybrid-tls-certificate.html) in the *AWS Systems Manager User Guide*\.
+
+   1. Ensure that your proxy server is reachable via the Internet Network\.
 
 1. Validate the vSphere environment configuration\.
 

@@ -7,4 +7,5 @@ Working with an Amazon RDS on VMware DB instance is similar to working with any 
 + [Choosing the On\-Premises DB Instance Class](db-instance-class-on-premises.md)
 + [Creating an On\-Premises DB Instance](creating-an-on-premises-db-instance.md)
 + [Creating Additional Custom AZs in a Region](creating-a-custom-az.md)
++ [Creating Read Replicas](read-replica.md)
 + [Managing Your On\-Premises DB Instances](managing-on-premises-db-instances.md)

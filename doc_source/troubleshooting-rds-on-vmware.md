@@ -4,10 +4,12 @@ To help troubleshoot problems that you have with Amazon RDS on VMware, you can u
 
 **Topics**
 + [Can't Connect to the RDS Connector](#troubleshooting-rds-on-vmware.connection)
-+ [Custom AZ Is Not Active](#troubleshooting-rds-on-vmware.custom-az-not-active)
++ [Custom AZ Is Unregistered or Creating](#troubleshooting-rds-on-vmware.custom-az-not-active)
++ [Custom AZ Is Disconnected](#troubleshooting-rds-on-vmware.disconnected)
 + [Can't Create a New Custom AZ](#troubleshooting-rds-on-vmware.cannot-create-custom-az)
 + [Edge Router Can't Ping the ESXi Edge Gateway](#troubleshooting-rds-on-vmware.cannot-create-custom-az)
 + [Error in the OVF Template](#troubleshooting-rds-on-vmware.ovf-template-error)
++ [Proxy Server Connection Problems or Changes](#troubleshooting-rds-on-vmware.proxy-server)
 
 ## Can't Connect to the RDS Connector<a name="troubleshooting-rds-on-vmware.connection"></a>
 
@@ -34,11 +36,25 @@ To solve the issue when onboarding is finished, complete the following steps:
 
 For more information, see [Onboard Your vSphere Cluster](getting-started-with-rds-on-vmware.onboard.md)\.
 
-## Custom AZ Is Not Active<a name="troubleshooting-rds-on-vmware.custom-az-not-active"></a>
+## Custom AZ Is Unregistered or Creating<a name="troubleshooting-rds-on-vmware.custom-az-not-active"></a>
 
-In this case, your custom AZ is not moving from `Unregistered` status to `Active` status\.
+If your custom AZ is unregistered or is in **Creating** status on the **Custom AZs** page, your custom AZ has yet to complete onboarding\. The onboarding might still be in progress\.
 
-To solve the issue, make sure that the custom AZ ID is correct\. Also, make sure that you selected the correct custom AZ\.
+To solve the issue, make sure that your custom AZ ID is correct\. Also, make sure that you selected the correct custom AZ\. If you are onboarding a new custom AZ, you might have selected this new custom AZ by mistake instead of an already onboarded custom AZ\.
+
+## Custom AZ Is Disconnected<a name="troubleshooting-rds-on-vmware.disconnected"></a>
+
+If your custom AZ is disconnected, Amazon RDS can't reach your custom AZ\. In this state, some Amazon RDS features are disabled on this specific custom AZ\. In this state, the AWS Management Console shows the **Disconnected** status on the **Custom AZs** page\.
+
+![\[Disconnected custom AZ\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/)
+
+The following cases might result in a disconnected custom AZ:
++ Your custom AZ might not have internet access\. Check the Distributed Port Group that is providing internet access to the custom AZ to verify whether it still has internet access\. You can verify internet access by first deploying a VM attached to this Distributed Port Group\. You can then run `curl checkip.amazonaws.com` or go to [ http://checkip\.amazonaws\.com/](http://checkip.amazonaws.com/) in a browser from within this VM\.
++ The custom AZ's VPN Originator IP might have changed\. Make sure that this IP address matches the internet\-facing IP address of your vSphere Cluster\. You can verify this by first deploying a VM attached to this Distributed Port Group\. You can then run `curl checkip.amazonaws.com` or go to [http://checkip\.amazonaws\.com/](http://checkip.amazonaws.com/) in a browser from within this VM\. The IP address returned is the cluster's internet\-facing IP address\. If this IP address doesn't match the Originator IP for this custom AZ, the custom AZ is disconnected\.
+
+To solve the issue, make sure that the Distributed Port Group provides internet access\. Also, make sure that the custom AZ's VPN Originator IP matches the internet\-facing IP address of your vSphere Cluster\. You might need to change your egress routing to use this IP address\.
+
+If you make any adjustments to your environment, wait up to 15 minutes for connectivity to be re\-established\. Contact AWS Support if your custom AZ remains offline after taking the steps described preceding\.
 
 ## Can't Create a New Custom AZ<a name="troubleshooting-rds-on-vmware.cannot-create-custom-az"></a>
 
@@ -56,7 +72,7 @@ For information about creating a new custom AZ, see [Creating Additional Custom 
 
 In this case, the Edge Router can't ping the ESXi Edge Gateway\.
 
-To solve the issue, check the routing configuration from Edge Router console, and look for errors\. If necessary, dump the routing table, and make sure that routes are correct\.
+To solve the issue, check the routing configuration from Edge Router console, and look for errors\.
 
 ## Error in the OVF Template<a name="troubleshooting-rds-on-vmware.ovf-template-error"></a>
 
@@ -73,3 +89,9 @@ If you have completed onboarding, complete the following steps to attempt to sol
 For more information about the OVF template, see [Onboard Your vSphere Cluster](getting-started-with-rds-on-vmware.onboard.md)\.
 
 For information about creating a new custom AZ, see [Creating Additional Custom AZs in a Region](creating-a-custom-az.md)\.
+
+## Proxy Server Connection Problems or Changes<a name="troubleshooting-rds-on-vmware.proxy-server"></a>
+
+In this case, you can't reach the internet through a proxy server, or you want to change your proxy server settings\.
+
+To solve connectivity problems, contact AWS Support\. To avoid connectivity problems, contact AWS Support before changing any proxy server settings\.
