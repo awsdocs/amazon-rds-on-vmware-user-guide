@@ -2,11 +2,11 @@
 
 Using Amazon RDS on VMware requires an understanding of VMware terminology and of terminology that is specific to Amazon RDS on VMware\.
 
-## VMware Terminology<a name="rds-on-vmware-concepts.vmware"></a>
+## VMware terminology<a name="rds-on-vmware-concepts.vmware"></a>
 
 This guide uses VMware terminology, such as data center, cluster, and resource pools\. For information about VMware terminology, see the [VMware vSphere Documentation](https://docs.vmware.com/en/VMware-vSphere/index.html)\.
 
-## Amazon RDS on VMware Terminology<a name="rds-on-vmware-concepts.rdsonvmare"></a>
+## Amazon RDS on VMware terminology<a name="rds-on-vmware-concepts.rdsonvmare"></a>
 
 This guide uses the following Amazon RDS on VMware terminology\.
 

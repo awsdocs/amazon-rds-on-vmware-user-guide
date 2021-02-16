@@ -1,8 +1,8 @@
-# Choosing the On\-Premises DB Instance Class<a name="db-instance-class-on-premises"></a>
+# Choosing the on\-premises DB instance class<a name="db-instance-class-on-premises"></a>
 
 The DB instance class determines the computation and memory capacity of an Amazon RDS DB instance\. Determine which DB instance class most closely matches your VMware cluster\. You specify the DB instance class when you create your on\-premises DB instance\.
 
-## On\-Premises DB Instance Class Types<a name="db-instance-class-on-premises.types"></a>
+## On\-premises DB instance class types<a name="db-instance-class-on-premises.types"></a>
 
 Amazon RDS on VMware supports three types of on\-premises DB instance classes: General, Compute Optimized, and Memory Optimized\.
 
@@ -11,13 +11,13 @@ The following are the on\-premises DB instance classes available:
 + **db\.cv11** – Current\-generation DB instance classes optimized for compute\-intensive workloads\. 
 + **db\.rv11** – Current\-generation DB instance classes optimized for memory\-intensive applications\. 
 
-## Terminology for DB Instance Class Hardware Specifications<a name="db-instance-class-on-premises.terminology"></a>
+## Terminology for DB instance class hardware specifications<a name="db-instance-class-on-premises.terminology"></a>
 
 The following terminology is used to describe hardware specifications for DB instance classes:
 + **vCPU** – The number of virtual central processing units \(CPUs\)
 + **Memory \(GiB\)** – The RAM memory, in gibibytes, allocated to the DB instance
 
-## Specifications for All Available On\-Premises DB Instance Classes<a name="db-instance-class-on-premises.summary"></a>
+## Specifications for all available on\-premises DB instance classes<a name="db-instance-class-on-premises.summary"></a>
 
 The following table provides details of the on\-premises Amazon RDS DB instance classes\. 
 

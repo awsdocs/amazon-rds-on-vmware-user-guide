@@ -1,6 +1,6 @@
-# Onboard Your vSphere Cluster<a name="getting-started-with-rds-on-vmware.onboard"></a>
+# Onboard your vSphere cluster<a name="getting-started-with-rds-on-vmware.onboard"></a>
 
-After you complete the steps in [Complete the Prerequisites](getting-started-with-rds-on-vmware.pre-onboarding.md), you can onboard your vSphere cluster\. To do this, create a new custom Availability Zone \(AZ\) and install Amazon RDS on VMware\.
+After you complete the steps in [Complete the prerequisites](getting-started-with-rds-on-vmware.pre-onboarding.md), you can onboard your vSphere cluster\. To do this, create a new custom Availability Zone \(AZ\) and install Amazon RDS on VMware\.
 
 **To onboard your vSphere cluster**
 
@@ -57,7 +57,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
 
    If the certificate is not trusted by your browser, you can choose to add an exception because you're connecting to the Installer VM that you just deployed in your VMware data center\.
 
-   Or you can follow the steps in [Import the Installer VM Certificate](getting-started-with-rds-on-vmware.onboard.import-vm-certificate.md) to add the certificate to your browser before launching the installer\.
+   Or you can follow the steps in [Import the Installer VM certificate](getting-started-with-rds-on-vmware.onboard.import-vm-certificate.md) to add the certificate to your browser before launching the installer\.
 
    The opening page of the Installer appears\.  
 ![\[Opening page of the Amazon RDS on VMware Installer\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-opening.png)
@@ -77,12 +77,12 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
 
 1. Choose **VALIDATE WITH AWS CREDENTIALS**\.
 
-   If validation fails, create your **AWS Access Key ID** and **AWS Secret Access Key** by following the instructions in [Managing Access Keys for Your AWS Account](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html) in the *AWS General Reference*\.
+   If validation fails, create your **AWS Access Key ID** and **AWS Secret Access Key** by following the instructions in [Managing access keys for your AWS account](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html) in the *AWS General Reference*\.
 
 1. Choose **AWS Configuration** and, for **Select Region**, choose the AWS Region that contains your custom AZ\.  
 ![\[Choose AWS Region\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-aws-region.png)
 
-   If you can't connect to the AWS Region, make sure that you completed all prerequisites described in [Complete the Prerequisites](getting-started-with-rds-on-vmware.pre-onboarding.md)\.
+   If you can't connect to the AWS Region, make sure that you completed all prerequisites described in [Complete the prerequisites](getting-started-with-rds-on-vmware.pre-onboarding.md)\.
 
 1. On the **AWS Configuration** page, choose **RETRIEVE AZS** to populate the list of custom AZs in the selected AWS Region\. Next, choose your custom AZ from **Select Custom AZs**\.  
 ![\[Select custom AZ\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-select-custom-az.png)
@@ -109,7 +109,7 @@ After you complete the steps in [Complete the Prerequisites](getting-started-wit
 
 1. On the **vCenter Configuration** page, choose **TEST CONNECTION**\.
 
-   If you can't connect, make sure that you completed all of the prerequisites described in [Complete the Prerequisites](getting-started-with-rds-on-vmware.pre-onboarding.md)\. You can also choose **DOWNLOAD SUPPORT BUNDLE** to download log files that can help you diagnose connection problems\.
+   If you can't connect, make sure that you completed all of the prerequisites described in [Complete the prerequisites](getting-started-with-rds-on-vmware.pre-onboarding.md)\. You can also choose **DOWNLOAD SUPPORT BUNDLE** to download log files that can help you diagnose connection problems\.
 
 1. Choose **NEXT** to open the **Placement** page\.  
 ![\[Placement Details page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/installer-placement-details.png)
@@ -151,8 +151,8 @@ The installation isn't complete until the status of the custom AZ is **Active**\
 
       If a custom AZ is registered with your vSphere cluster, the status is **Active**\.
 
-      If a custom AZ is disconnected from Amazon RDS, the status is **Disconnected**\. For more information about restoring connectivity with such a custom AZ, see [Custom AZ Is Disconnected](troubleshooting-rds-on-vmware.md#troubleshooting-rds-on-vmware.disconnected)\.
+      If a custom AZ is disconnected from Amazon RDS, the status is **Disconnected**\. For more information about restoring connectivity with such a custom AZ, see [Custom AZ is disconnected](troubleshooting-rds-on-vmware.md#troubleshooting-rds-on-vmware.disconnected)\.
 
 1. After a custom AZ is registered, you can create one or more DB instances in the custom AZ\.
 
-   For more information, see [Creating an On\-Premises DB Instance](creating-an-on-premises-db-instance.md)\.
+   For more information, see [Creating an on\-premises DB instance](creating-an-on-premises-db-instance.md)\.

@@ -1,7 +1,7 @@
 # Amazon Relational Database Service on VMware User Guide
 
 -----
-*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2021 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -14,22 +14,22 @@ Amazon's trademarks and trade dress may not be used in
 
 -----
 ## Contents
-+ [What Is Amazon RDS on VMware?](rds-on-vmware.md)
-   + [How Amazon RDS on VMware Works](rds-on-vmware-architecture.md)
++ [What is Amazon RDS on VMware?](rds-on-vmware.md)
+   + [How Amazon RDS on VMware works](rds-on-vmware-architecture.md)
    + [Terminology](rds-on-vmware-concepts.md)
-   + [Support for RDS Features in Amazon RDS on VMware](rds-feature-support.md)
-+ [Setting Up Amazon RDS on VMware](setting-up-rds-on-vmware.md)
-+ [Getting Started with Amazon RDS on VMware](getting-started-with-rds-on-vmware.md)
-   + [Complete the Prerequisites](getting-started-with-rds-on-vmware.pre-onboarding.md)
-   + [Onboard Your vSphere Cluster](getting-started-with-rds-on-vmware.onboard.md)
-      + [Import the Installer VM Certificate](getting-started-with-rds-on-vmware.onboard.import-vm-certificate.md)
+   + [Support for RDS features in Amazon RDS on VMware](rds-feature-support.md)
++ [Setting up Amazon RDS on VMware](setting-up-rds-on-vmware.md)
++ [Getting started with Amazon RDS on VMware](getting-started-with-rds-on-vmware.md)
+   + [Complete the prerequisites](getting-started-with-rds-on-vmware.pre-onboarding.md)
+   + [Onboard your vSphere cluster](getting-started-with-rds-on-vmware.onboard.md)
+      + [Import the Installer VM certificate](getting-started-with-rds-on-vmware.onboard.import-vm-certificate.md)
 + [Working with Amazon RDS on VMware](working-with-rds.md)
-   + [Installing the Media for Microsoft SQL Server](installing-media.md)
-   + [Choosing the On-Premises DB Instance Class](db-instance-class-on-premises.md)
-   + [Creating an On-Premises DB Instance](creating-an-on-premises-db-instance.md)
-   + [Creating Additional Custom AZs in a Region](creating-a-custom-az.md)
-   + [Creating Read Replicas](read-replica.md)
-   + [Managing Your On-Premises DB Instances](managing-on-premises-db-instances.md)
+   + [Installing the media for Microsoft SQL Server](installing-media.md)
+   + [Choosing the on-premises DB instance class](db-instance-class-on-premises.md)
+   + [Creating an on-premises DB instance](creating-an-on-premises-db-instance.md)
+   + [Creating additional custom AZs in an AWS Region](creating-a-custom-az.md)
+   + [Creating read replicas](read-replica.md)
+   + [Managing your on-premises DB instances](managing-on-premises-db-instances.md)
 + [Troubleshooting Amazon RDS on VMware](troubleshooting-rds-on-vmware.md)
-+ [Document History](WhatsNew.md)
++ [Document history](WhatsNew.md)
 + [AWS glossary](glossary.md)

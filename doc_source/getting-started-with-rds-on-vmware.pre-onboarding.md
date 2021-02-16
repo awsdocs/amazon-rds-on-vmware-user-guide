@@ -1,10 +1,10 @@
-# Complete the Prerequisites<a name="getting-started-with-rds-on-vmware.pre-onboarding"></a>
+# Complete the prerequisites<a name="getting-started-with-rds-on-vmware.pre-onboarding"></a>
 
 Before you onboard your vSphere cluster, complete the following prerequisites\.
 
 **To prepare to onboard your vSphere cluster for Amazon RDS on VMware**
 
-1. Complete the tasks in [Setting Up Amazon RDS on VMware](setting-up-rds-on-vmware.md)\.
+1. Complete the tasks in [Setting up Amazon RDS on VMware](setting-up-rds-on-vmware.md)\.
 
 1. Make sure that you have a business\-level or enterprise\-level AWS Support plan\.
 
@@ -236,6 +236,6 @@ DHCP services are not required on the Management Network\.
    }
    ```
 
-   For information about creating an IAM policy, see [Creating IAM Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html) in the *AWS Identity and Access Management User Guide*\.
+   For information about creating an IAM policy, see [Creating IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_create.html) in the *AWS Identity and Access Management User Guide*\.
 
-   For information about adding an IAM policy to a user, see [Adding and Removing IAM Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html) in the *AWS Identity and Access Management User Guide*\.
+   For information about adding an IAM policy to a user, see [Adding and removing IAM identity permissions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_manage-attach-detach.html) in the *AWS Identity and Access Management User Guide*\.

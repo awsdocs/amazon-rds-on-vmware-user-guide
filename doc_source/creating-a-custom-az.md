@@ -1,6 +1,6 @@
-# Creating Additional Custom AZs in a Region<a name="creating-a-custom-az"></a>
+# Creating additional custom AZs in an AWS Region<a name="creating-a-custom-az"></a>
 
-During the onboarding process described in [Getting Started with Amazon RDS on VMware](getting-started-with-rds-on-vmware.md), you created a custom Availability Zone \(custom AZ\) in an AWS Region\. You can create additional custom AZs in the same AWS Region\. 
+During the onboarding process described in [Getting started with Amazon RDS on VMware](getting-started-with-rds-on-vmware.md), you created a custom Availability Zone \(custom AZ\) in an AWS Region\. You can create additional custom AZs in the same AWS Region\. 
 
 **To create a custom AZ**
 

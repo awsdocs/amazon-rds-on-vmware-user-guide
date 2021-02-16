@@ -1,4 +1,4 @@
-# Import the Installer VM Certificate<a name="getting-started-with-rds-on-vmware.onboard.import-vm-certificate"></a>
+# Import the Installer VM certificate<a name="getting-started-with-rds-on-vmware.onboard.import-vm-certificate"></a>
 
 You can extract the self\-signed certificate generated at bootstrap time on the installer VM from vCenter\. You then convert the certificate to binary format that you can import as a Trusted CA on the browser\. Doing so makes the connection in between the browser and the RDS Installer secure\.
 
@@ -59,6 +59,6 @@ The process requires the Managed Object Browser \(MOB\) to find the certificate 
       After the certificate is installed, it is listed in the **Trusted Root Certification Authorities** folder, as shown following\.  
 ![\[Certificates page\]](http://docs.aws.amazon.com/AmazonRDS/latest/RDSonVMwareUserGuide/images/vm-cert-certificate-listed.png)
 
-1. Restart the browser and launch the Installer by following the instructions in step 8 in [Onboard Your vSphere Cluster](getting-started-with-rds-on-vmware.onboard.md)\.
+1. Restart the browser and launch the Installer by following the instructions in step 8 in [Onboard your vSphere cluster](getting-started-with-rds-on-vmware.onboard.md)\.
 
    The security alert shouldn't appear\.

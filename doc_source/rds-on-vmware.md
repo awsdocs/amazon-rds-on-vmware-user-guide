@@ -1,4 +1,4 @@
-# What Is Amazon RDS on VMware?<a name="rds-on-vmware"></a>
+# What is Amazon RDS on VMware?<a name="rds-on-vmware"></a>
 
 Amazon Relational Database Service \(Amazon RDS\) is a web service that makes it easier to set up, operate, and scale a relational database in the cloud\. It provides cost\-efficient, resizeable capacity for an industry\-standard relational database and manages common database administration tasks\. Amazon RDS includes Amazon RDS on VMware, which provides these services in an on\-premises, private environment\. For more information about Amazon RDS, see the *[Amazon RDS User Guide](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/)\.*
 
@@ -11,11 +11,11 @@ Amazon RDS on VMware reduces operational overhead for database management in you
 To learn more about Amazon RDS on VMware, see the following topics:
 + [Features of Amazon RDS on VMware](#rds-on-vmware-features)
 + [Accessing Amazon RDS on VMware](#acessing)
-+ [How Amazon RDS on VMware Works](rds-on-vmware-architecture.md)
++ [How Amazon RDS on VMware works](rds-on-vmware-architecture.md)
 + [Terminology](rds-on-vmware-concepts.md)
-+ [Support for RDS Features in Amazon RDS on VMware](rds-feature-support.md)
++ [Support for RDS features in Amazon RDS on VMware](rds-feature-support.md)
 
-To start work with Amazon RDS on VMware, see [Setting Up Amazon RDS on VMware](setting-up-rds-on-vmware.md)\. 
+To start work with Amazon RDS on VMware, see [Setting up Amazon RDS on VMware](setting-up-rds-on-vmware.md)\. 
 
 ## Features of Amazon RDS on VMware<a name="rds-on-vmware-features"></a>
 
@@ -25,7 +25,7 @@ Amazon RDS on VMware provides the following features:
 + Enables easy scaling of the compute, storage, and memory resources in your on\-premises DB instance
 + Provides CloudWatch metrics for your on\-premises databases
 + Enables manual or automatic backup of your on\-premises databases
-+ Supports restoring a DB instance from a snapshot and point\-in\-time restore \(except for Microsoft SQL Server DB instances\)
++ Supports restoring a DB instance from a snapshot and point\-in\-time restore
 
 ## Accessing Amazon RDS on VMware<a name="acessing"></a>
 

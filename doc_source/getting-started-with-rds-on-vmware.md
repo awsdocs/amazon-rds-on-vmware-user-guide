@@ -1,8 +1,8 @@
-# Getting Started with Amazon RDS on VMware<a name="getting-started-with-rds-on-vmware"></a>
+# Getting started with Amazon RDS on VMware<a name="getting-started-with-rds-on-vmware"></a>
 
 To get started with Amazon RDS on VMware, you onboard a new vSphere cluster as a custom Availability Zone \(custom AZ\) for Amazon RDS\.
 
-You only onboard a particular vSphere cluster once\. After you complete the onboarding tasks successfully, you don't need to repeat the tasks for the same vSphere cluster\. If you have already configured the vSphere cluster for Amazon RDS on VMware, and you want to add another custom AZ to it, see [Creating Additional Custom AZs in a Region](creating-a-custom-az.md)\.
+You only onboard a particular vSphere cluster once\. After you complete the onboarding tasks successfully, you don't need to repeat the tasks for the same vSphere cluster\. If you have already configured the vSphere cluster for Amazon RDS on VMware, and you want to add another custom AZ to it, see [Creating additional custom AZs in an AWS Region](creating-a-custom-az.md)\.
 
 During onboarding, you configure the following networks\.
 
@@ -25,8 +25,8 @@ Currently, Amazon RDS on VMware is available only in the US East \(N\. Virginia\
 
 To create a custom AZ, you take the following two steps:
 
-1. [Complete the Prerequisites](getting-started-with-rds-on-vmware.pre-onboarding.md)
+1. [Complete the prerequisites](getting-started-with-rds-on-vmware.pre-onboarding.md)
 
-1. [Onboard Your vSphere Cluster](getting-started-with-rds-on-vmware.onboard.md)
+1. [Onboard your vSphere cluster](getting-started-with-rds-on-vmware.onboard.md)
 
 For more details about working with Amazon RDS on VMware, see [Working with Amazon RDS on VMware](working-with-rds.md)\.

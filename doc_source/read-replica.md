@@ -1,23 +1,23 @@
-# Creating Read Replicas<a name="read-replica"></a>
+# Creating read replicas<a name="read-replica"></a>
 
 Amazon RDS on VMware uses the MySQL and PostgreSQL DB engines' built\-in replication functionality to create a special type of DB instance called a read replica from a source DB instance\. Updates made to the source DB instance are asynchronously copied to the read replica\. You can reduce the load on your source DB instance by routing read queries from your applications to the read replica\. Using read replicas, you can elastically scale out beyond the capacity constraints of a single DB instance for read\-heavy database workloads\.
 
 When you create a read replica, you first specify an existing DB instance as the source\. Then Amazon RDS takes a snapshot of the source instance and creates a read\-only instance from the snapshot\. RDS then uses the asynchronous replication method for the DB engine to update the read replica whenever there is a change to the source DB instance\. The read replica operates as a DB instance that allows only read\-only connections\. Applications connect to a read replica the same way they do to any DB instance\. RDS replicates all databases in the source DB instance\.
 
-For more information on Amazon RDS read replicas, see [Working with Read Replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)\.
+For more information on Amazon RDS read replicas, see [Working with read replicas](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)\.
 
 ## Limitations<a name="read-replica.limitations"></a>
 
 Read replicas on Amazon RDS on VMware have the following limitations:
 + Read replicas are supported only for MySQL and PostgreSQL DB instance types\.
 + RDS on VMware read replicas are supported on PostgreSQL versions 10\.9 and 10\.10, and MySQL version 5\.7\.
-+ You can't create a read replica in a different custom Availability Zone \(CAZ\) from the primary DB instance\.
++ You can't create a read replica in a different AWS Region from the primary DB instance\.
 + Only one read replica per DB instance is supported\.
 + The primary DB instance and the read replica both exist on\-premises\.
 + The read replica has the same compute and storage requirements as the primary DB instance\. Make sure that your installation has enough capacity for both the primary and the replica\.
 + The read replica isn't automatically promoted if the primary DB instance fails\. You must manually promote the read replica\.
 
-## Creating a Read Replica<a name="creating-read-replica"></a>
+## Creating a read replica<a name="creating-read-replica"></a>
 
 You can create a read replica from an existing MySQL or PostgreSQL DB instance using the AWS Management Console or AWS CLI\.
 
@@ -35,7 +35,7 @@ You can create a read replica from an existing MySQL or PostgreSQL DB instance u
 
 1. Choose the instance specifications that you want to use\. We recommend that you use the same DB instance class and storage type as the source DB instance for the read replica\.
 
-1. For **Avaliability zone**, choose the CAZ where you want to create the read replica\.
+1. For **Destination Custom AZ**, choose the custom Availability Zone where you want to create the read replica\. This can be the same CAZ as the primary DB instance \(the default value\), or a different CAZ\.
 
 1. For **DB instance identifier**, enter a name for the read replica\.
 
@@ -65,7 +65,7 @@ aws rds create-db-instance-read-replica ^
     --availability-zone mycaz
 ```
 
-## Promoting a Read Replica to Be a Standalone DB Instance<a name="USER_ReadRepl.Promote"></a>
+## Promoting a read replica to be a standalone DB instance<a name="USER_ReadRepl.Promote"></a>
 
 You can promote a MySQL or PostgreSQL read replica into a standalone DB instance\. When you promote a read replica, the DB instance is rebooted before it becomes available\.
 
@@ -85,7 +85,7 @@ Backup duration is a function of the number of changes to the database since the
 
 1. Choose the read replica that you want to promote\.
 
-1. For **Actions**, choose **Promote read replica**\.
+1. For **Actions**, choose **Promote**\.
 
 1. On the **Promote Read Replica** page, enter the backup retention period and the backup window for the new promoted DB instance\.
 

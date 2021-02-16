@@ -1,11 +1,11 @@
-# Installing the Media for Microsoft SQL Server<a name="installing-media"></a>
+# Installing the media for Microsoft SQL Server<a name="installing-media"></a>
 
 If you are using Microsoft SQL Server, an on\-premises customer provided license is required\. In this case, make sure that you install your operating system media and database media before you create Amazon RDS DB instances\.
 
 **Important**  
-MySQL and PostgreSQL don't require you to install media\. If you plan to use one of these DB engines, you can move on to [Choosing the On\-Premises DB Instance Class](db-instance-class-on-premises.md)\.
+MySQL and PostgreSQL don't require you to install media\. If you plan to use one of these DB engines, you can move on to [Choosing the on\-premises DB instance class](db-instance-class-on-premises.md)\.
 
-## Supported Media<a name="installing-media.supported"></a>
+## Supported media<a name="installing-media.supported"></a>
 
 Currently, the following media are supported:
 + **OS Installation Media**
@@ -45,7 +45,7 @@ Currently, the following media are supported:
 
   For more information, see [ https://my\.visualstudio\.com/Downloads?q=sql%20server%202016](https://my.visualstudio.com/Downloads?q=sql%20server%202016)\.
 
-## Install the Media<a name="installing-media.install"></a>
+## Install the media<a name="installing-media.install"></a>
 
 You can install the media using the AWS Management Console, the AWS CLI, or the RDS API\.
 
@@ -79,7 +79,7 @@ You can install the media using the AWS Management Console, the AWS CLI, or the 
    + **Engine installation path** – The absolute path to the DB engine media on your VMware cluster datastore
 **Important**  
 The edition and version of the media referenced in the **Engine installation path** must match the DB engine edition and version that you chose in the previous step\.  
-For information about supported media, see [Supported Media](#installing-media.supported)\.
+For information about supported media, see [Supported media](#installing-media.supported)\.
 
    Both paths must be present on the same datastore that was specified in the Installer during onboarding\. Don't include the datastore name in the path\. The following are examples of valid paths:
    + **OS installation path** – `WindowsISO/en_windows_server_2016_x64_dvd_9327751.iso`
@@ -104,7 +104,7 @@ The path must be present on the same datastore that was specified in the install
 **Important**  
 The path must be present on the same datastore that was specified in the installer during onboarding\. Do not include the datastore name in the path\.
 
-For information about supported media, see [Supported Media](#installing-media.supported)\.
+For information about supported media, see [Supported media](#installing-media.supported)\.
 
 **Example**  
 The following example imports the installation media for a `sqlserver-ee` engine\.  
@@ -141,16 +141,16 @@ To install media by using the Amazon RDS API, call the [ImportInstallationMedia]
 + `EngineVersion` – The version number of the database engine to use
 + `OSInstallationMediaPath` – The path to the installation media for the operating system associated with the specified DB engine
 
-## Troubleshooting Media Installation Issues for Microsoft SQL Server<a name="installing-media.troubleshooting"></a>
+## Troubleshooting media installation issues for Microsoft SQL Server<a name="installing-media.troubleshooting"></a>
 
 Use the following sections to troubleshoot problems that you have with installing the media for Microsoft SQL Server\.
 
 **Topics**
-+ [Media Not Found](#installing-media.troubleshooting.media-not-found)
-+ [Media Not Supported](#installing-media.troubleshooting.media-not-found)
-+ [Custom AZ Disconnected](#installing-media.troubleshooting.custom-az-disconnected)
++ [Media not found](#installing-media.troubleshooting.media-not-found)
++ [Media not supported](#installing-media.troubleshooting.media-not-found)
++ [Custom AZ disconnected](#installing-media.troubleshooting.custom-az-disconnected)
 
-### Media Not Found<a name="installing-media.troubleshooting.media-not-found"></a>
+### Media not found<a name="installing-media.troubleshooting.media-not-found"></a>
 
 In this case, the media wasn't found in the specified location, and the following errors can be returned\.
 
@@ -166,9 +166,9 @@ The cause for this issue is almost always one of the following:
 
 To solve the issue, make sure that the path is correct and that the datastore isn't included in the path\. Also, make sure that the media is in the datastore that was specified in the installer during onboarding\.
 
-For information about onboarding, see [Getting Started with Amazon RDS on VMware](getting-started-with-rds-on-vmware.md)\.
+For information about onboarding, see [Getting started with Amazon RDS on VMware](getting-started-with-rds-on-vmware.md)\.
 
-### Media Not Supported<a name="installing-media.troubleshooting.media-not-found"></a>
+### Media not supported<a name="installing-media.troubleshooting.media-not-found"></a>
 
 In this case, the specified media isn't supported by Amazon RDS on VMware, and the following errors can be returned:
 
@@ -177,10 +177,10 @@ OS media validation failed
 Engine media validation failed
 ```
 
-To solve the issue, specify supported installation media\. For information about supported media, see [Supported Media](#installing-media.supported)\.
+To solve the issue, specify supported installation media\. For information about supported media, see [Supported media](#installing-media.supported)\.
 
-### Custom AZ Disconnected<a name="installing-media.troubleshooting.custom-az-disconnected"></a>
+### Custom AZ disconnected<a name="installing-media.troubleshooting.custom-az-disconnected"></a>
 
 In this case, the custom AZ that you attempted to attach installation media to can't currently be reached\.
 
-To solve the issue, see [Custom AZ Is Disconnected](troubleshooting-rds-on-vmware.md#troubleshooting-rds-on-vmware.disconnected)\.
+To solve the issue, see [Custom AZ is disconnected](troubleshooting-rds-on-vmware.md#troubleshooting-rds-on-vmware.disconnected)\.

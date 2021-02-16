@@ -1,17 +1,17 @@
-# Setting Up Amazon RDS on VMware<a name="setting-up-rds-on-vmware"></a>
+# Setting up Amazon RDS on VMware<a name="setting-up-rds-on-vmware"></a>
 
-If you've already signed up for Amazon Web Services \(AWS\), you can start using Amazon RDS on VMware immediately by completing the tasks in [Getting Started with Amazon RDS on VMware](getting-started-with-rds-on-vmware.md)\.
+If you've already signed up for Amazon Web Services \(AWS\), you can start using Amazon RDS on VMware immediately by completing the tasks in [Getting started with Amazon RDS on VMware](getting-started-with-rds-on-vmware.md)\.
 
 If you haven't signed up for AWS yet, complete the following tasks to get set up to use Amazon RDS on VMware\. 
 
 **Topics**
-+ [Sign Up for AWS](#CHAP_SettingUp.SignUp)
-+ [Create and Configure an IAM User](#CHAP_SettingUp.IAM)
-+ [SSL/TLS Certificate Requirements](#CHAP_SettingUp.Certificates)
++ [Sign up for AWS](#CHAP_SettingUp.SignUp)
++ [Create and configure an IAM user](#CHAP_SettingUp.IAM)
++ [SSL/TLS certificate requirements](#CHAP_SettingUp.Certificates)
 
-## Sign Up for AWS<a name="CHAP_SettingUp.SignUp"></a>
+## Sign up for AWS<a name="CHAP_SettingUp.SignUp"></a>
 
-If you have an AWS account already, skip to the next section, [Create and Configure an IAM User](#CHAP_SettingUp.IAM)\. 
+If you have an AWS account already, skip to the next section, [Create and configure an IAM user](#CHAP_SettingUp.IAM)\. 
 
 If you don't have an AWS account, you can use the following procedure to create one\.
 
@@ -23,17 +23,17 @@ If you don't have an AWS account, you can use the following procedure to create 
 
    Part of the sign\-up procedure involves receiving a phone call and entering a verification code on the phone keypad\.
 
-## Create and Configure an IAM User<a name="CHAP_SettingUp.IAM"></a>
+## Create and configure an IAM user<a name="CHAP_SettingUp.IAM"></a>
 
 After you create an AWS account and successfully connect to the AWS Management Console, you can create an AWS Identity and Access Management \(IAM\) user\. Instead of signing in with your AWS root account, we recommend that you use an IAM administrative user with Amazon RDS\. 
 
 One way to do this is to create a new IAM user and grant it administrator permissions\. Or you can add an existing IAM user to an IAM group with Amazon RDS administrative permissions\. You can then access AWS from a special URL using the credentials for the IAM user\. 
 
 **Topics**
-+ [Create an IAM User](#CHAP_SettingUp.IAM.Create)
-+ [Create Access Keys](#CHAP_SettingUp.IAM.AccessKeys)
++ [Create an IAM user](#CHAP_SettingUp.IAM.Create)
++ [Create access keys](#CHAP_SettingUp.IAM.AccessKeys)
 
-### Create an IAM User<a name="CHAP_SettingUp.IAM.Create"></a>
+### Create an IAM user<a name="CHAP_SettingUp.IAM.Create"></a>
 
 If you signed up for AWS but haven't created an IAM user for yourself, you can create one using the IAM console\.
 
@@ -69,11 +69,11 @@ You must activate IAM user and role access to Billing before you can use the `Ad
 
 1. Choose **Next: Tags**\.
 
-1. \(Optional\) Add metadata to the user by attaching tags as key\-value pairs\. For more information about using tags in IAM, see [Tagging IAM Entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html) in the *IAM User Guide*\.
+1. \(Optional\) Add metadata to the user by attaching tags as key\-value pairs\. For more information about using tags in IAM, see [Tagging IAM entities](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_tags.html) in the *IAM User Guide*\.
 
 1. Choose **Next: Review** to see the list of group memberships to be added to the new user\. When you are ready to proceed, choose **Create user**\.
 
-You can use this same process to create more groups and users and to give your users access to your AWS account resources\. To learn about using policies that restrict user permissions to specific AWS resources, see [Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html) and [Example Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html)\.
+You can use this same process to create more groups and users and to give your users access to your AWS account resources\. To learn about using policies that restrict user permissions to specific AWS resources, see [Access management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html) and [Example policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html)\.
 
 To sign in as the new IAM user, first sign out of the AWS Management Console\. Then use the following URL, where **your\_aws\_account\_id** is your AWS account number without the hyphens\. For example, if your AWS account number is `1234-5678-9012`, your AWS account ID is `123456789012`\.
 
@@ -91,10 +91,10 @@ https://your_account_alias.signin.aws.amazon.com/console/
 
 To verify the sign\-in link for IAM users for your account, open the IAM console and check under **AWS Account Alias** on the dashboard\.
 
-### Create Access Keys<a name="CHAP_SettingUp.IAM.AccessKeys"></a>
+### Create access keys<a name="CHAP_SettingUp.IAM.AccessKeys"></a>
 
-You can also create access keys for your AWS account\. These access keys can be used to access AWS through the AWS Command Line Interface \(AWS CLI\) or through the Amazon RDS API\. For more information, see [Managing Access Keys for Your AWS Account](https://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html), [Installing the AWS Command Line Interface](https://docs.aws.amazon.com/cli/latest/userguide/installing.html), and the* [Amazon RDS API Reference\.](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/Welcome.html)*
+You can also create access keys for your AWS account\. These access keys can be used to access AWS through the AWS Command Line Interface \(AWS CLI\) or through the Amazon RDS API\. For more information, see [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html), [Installing the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/installing.html), and the* [Amazon RDS API Reference\.](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/Welcome.html)*
 
-## SSL/TLS Certificate Requirements<a name="CHAP_SettingUp.Certificates"></a>
+## SSL/TLS certificate requirements<a name="CHAP_SettingUp.Certificates"></a>
 
-Amazon RDS on VMware uses the latest AWS certificates \(2019\) for encryption\. For information about downloading these certificates, see [Using SSL/TLS to Encrypt a Connection to a DB Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html) in the *RDS User Guide*\.
+Amazon RDS on VMware uses the latest AWS certificates \(2019\) for encryption\. For information about downloading these certificates, see [Using SSL/TLS to encrypt a connection to a DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.SSL.html) in the *RDS User Guide*\.
